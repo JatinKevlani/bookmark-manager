@@ -1,6 +1,8 @@
 body{
     background-color: black;
     color: white;
+    align-items: center;
+    text-align: center;
 }
 
 .container h1 a{
@@ -13,10 +15,28 @@ body{
     color: blue;
 }
 
+#sourceCode{
+    text-align: center;
+    background-color: cadetblue;
+}
+
+#primaryHeader{
+    background-color: burlywood;
+}
+
+#secondaryHeader{
+    background-color: burlywood;
+}
+
+.btn{
+    background-color: blue;
+    border-radius: 6px;
+}
+
 .marks{
     text-decoration: none;
     color: white;
-    font-size: xx-large;
+    font-size: 25px;
 }
 
 .marks:hover{

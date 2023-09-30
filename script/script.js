@@ -10,7 +10,7 @@ function updatePrimary() {
     } else {
         primaryMarks.innerHTML = "";
         for (let i = 0; i < pMarks.length; i++) {
-            primaryMarks.innerHTML += `<a href="${pMarks[i].pURL}" target="_blank" class="marks">${pMarks[i].pTitle}</a> <button onclick="deletePrimary(${i});">Delete</button> <br>`;
+            primaryMarks.innerHTML += `<a href="${pMarks[i].pURL}" target="_blank" class="marks">${pMarks[i].pTitle}</a> <button class="btn" onclick="deletePrimary(${i});">Delete</button> <br>`;
         }
     }
 }
@@ -24,7 +24,7 @@ function updateSecondary() {
     } else {
         secondaryMarks.innerHTML = "";
         for (let i = 0; i < sMarks.length; i++) {
-            secondaryMarks.innerHTML += `<a href="${sMarks[i].sURL}" target="_blank" class="marks">${sMarks[i].sTitle}</a> <button onclick="deleteSecondary(${i});">Delete</button> <br>`;
+            secondaryMarks.innerHTML += `<a href="${sMarks[i].sURL}" target="_blank" class="marks">${sMarks[i].sTitle}</a> <button class="btn" onclick="deleteSecondary(${i});">Delete</button> <br>`;
         }
     }
 }

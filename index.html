@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookmarks Manager - JatinKevlani</title>
+    <link rel="icon" href="img/bookmark-svgrepo-com.svg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <h1><a href="https://github.com/JatinKevlani/bookmark-manager.git" target="_blank">Bookmarks Manager - JatinKevlani</a></h1>
+        <h1 id="sourceCode"><a href="https://github.com/JatinKevlani/bookmark-manager.git" target="_blank">Bookmarks Manager - JatinKevlani</a></h1>
         <div class="primary">
-            <h2>Primary Bookmarks</h2>
+            <h2 id="primaryHeader">Primary Bookmarks</h2>
             <div id="primaryMarks"></div>
-            <button id="pBtn">Add</button>
-            <button id="cpBtn">Clear primary bookmarks</button>
+            <button class="btn" id="pBtn">Add</button>
+            <button class="btn" id="cpBtn">Clear primary bookmarks</button>
         </div>
         <div class="secondary">
-            <h2>Secondary Bookmarks</h2>
+            <h2 id="secondaryHeader">Secondary Bookmarks</h2>
             <div id="secondaryMarks"></div>
-            <button id="sBtn">Add</button>
-            <button id="csBtn">Clear secondary bookmarks</button>
+            <button class="btn" id="sBtn">Add</button>
+            <button class="btn" id="csBtn">Clear secondary bookmarks</button>
         </div>
     </div>
     <script src="script/script.js"></script>
