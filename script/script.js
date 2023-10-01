@@ -73,24 +73,24 @@ sBtn.addEventListener("click", () => {
     updateSecondary(); // Update secondary bookmarks after new link added
 });
 
-cpBtn.addEventListener("click", ()=>{
-    if(localStorage.getItem("pMarks") == undefined){
+cpBtn.addEventListener("click", () => {
+    if (localStorage.getItem("pMarks") == undefined) {
         alert("Primary bookmarks list is already empty!");
         return;
     }
-    if(confirm("Do you really want to clear all primary bookmarks?")){
+    if (confirm("Do you really want to clear all primary bookmarks?")) {
         pMarks = []; // Reset the array
         localStorage.removeItem("pMarks"); // Remove all pMarks
         updatePrimary(); // Update primary bookmarks
     }
 });
 
-csBtn.addEventListener("click", ()=>{
-    if(localStorage.getItem("sMarks") == undefined){
+csBtn.addEventListener("click", () => {
+    if (localStorage.getItem("sMarks") == undefined) {
         alert("Secondary bookmarks list is already empty!");
         return;
     }
-    if(confirm("Do you really want to clear all secondary bookmarks?")){
+    if (confirm("Do you really want to clear all secondary bookmarks?")) {
         sMarks = []; // Reset the array
         localStorage.removeItem("sMarks"); // Remove all sMarks
         updateSecondary(); // Update secondary bookmarks
@@ -98,14 +98,14 @@ csBtn.addEventListener("click", ()=>{
 });
 
 // Function to delete particular link from primary bookmarks
-function deletePrimary(index){
+function deletePrimary(index) {
     pMarks.splice(index, 1); // Deleting patricular link from the array
     localStorage.setItem("pMarks", JSON.stringify(pMarks)); // Updatinf the modified array in local storage
     updatePrimary(); // Update primary bookmarks
 }
 
 // Function to delete particular link from secondary bookmarks
-function deleteSecondary(index){
+function deleteSecondary(index) {
     sMarks.splice(index, 1); // Deleting particular link from the array
     localStorage.setItem("sMarks", JSON.stringify(sMarks)); // Updating the modified array in local storage
     updateSecondary(); // Update secondary bookmarks
