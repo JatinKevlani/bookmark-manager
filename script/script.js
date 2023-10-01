@@ -1,10 +1,11 @@
-let pMarks= []; // Initializing array for primary bookmarks
-let sMarks= []; // Initializing array for secondary bookmarks
+const pMarksJSON = localStorage.getItem("pMarks"); // Get primary bookmarks from local storage in JSON format
+let pMarks = pMarksJSON ? JSON.parse(pMarksJSON) : []; // If not empty parse it
+
+const sMarksJSON = localStorage.getItem("sMarks"); // Get secondary bookmarks from local storage in JSON format
+let sMarks = sMarksJSON ? JSON.parse(sMarksJSON) : []; // If not empty parse it
 
 // Function to update primary bookmarks
 function updatePrimary() {
-    const pMarksJSON = localStorage.getItem("pMarks"); // Get primary bookmarks from local storage in JSON format
-    let pMarks = pMarksJSON ? JSON.parse(pMarksJSON) : []; // If not empty parse it
     if (pMarks.length == 0) {
         primaryMarks.innerHTML = "No stored links!";
     } else {
@@ -17,8 +18,6 @@ function updatePrimary() {
 
 // Function to update secondary bookmarks
 function updateSecondary() {
-    const sMarksJSON = localStorage.getItem("sMarks"); // Get secondary bookmarks from local storage in JSON format
-    let sMarks = sMarksJSON ? JSON.parse(sMarksJSON) : []; // If not empty parse it
     if (sMarks.length == 0) {
         secondaryMarks.innerHTML = "No stored links!";
     } else {
@@ -49,7 +48,7 @@ pBtn.addEventListener("click", () => {
         pURL: url
     };
     pMarks.push(newLink); // Push new link to the array
-    localStorage.setItem("pMarks", JSON.stringify(pMarks)); // Convert array into JSON forn local storage
+    localStorage.setItem("pMarks", JSON.stringify(pMarks)); // Convert array into JSON for local storage
     updatePrimary(); // Update primary bookmarks after new link added
 });
 
@@ -70,7 +69,7 @@ sBtn.addEventListener("click", () => {
         sURL: url
     };
     sMarks.push(newLink); // Push new link to the array
-    localStorage.setItem("sMarks", JSON.stringify(sMarks)); // Convert array into JSON forn local storage
+    localStorage.setItem("sMarks", JSON.stringify(sMarks)); // Convert array into JSON for local storage
     updateSecondary(); // Update secondary bookmarks after new link added
 });
 
